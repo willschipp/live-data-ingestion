@@ -1,38 +1,30 @@
 package com.emc.data.service;
 
-import static org.junit.Assert.assertTrue;
-
 import java.io.ByteArrayOutputStream;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.SpringApplicationConfiguration;
+import org.springframework.integration.channel.AbstractSubscribableChannel;
+import org.springframework.integration.support.MessageBuilder;
+import org.springframework.messaging.Message;
+import org.springframework.messaging.MessageChannel;
+import org.springframework.messaging.MessageHandler;
+import org.springframework.messaging.MessagingException;
+import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.util.FileCopyUtils;
 
-import com.emc.data.Application;
-import com.emc.data.domain.DataPointRepository;
-import com.emc.data.domain.ExtensionRepository;
-import com.emc.data.domain.MessageObjectRepository;
-
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes=Application.class)
+@ContextConfiguration("classpath:/META-INF/spring/integration/*.xml")
 public class SimpleLiveDataEndpointIT {
 
 	@Autowired
-	private LiveDataEndpoint liveDataEndpoint;
+	private MessageChannel input;
 	
 	@Autowired
-	private MessageObjectRepository messageObjectRepository;
-	
-	@Autowired
-	private DataPointRepository dataPointRepository;
-	
-	@Autowired
-	private ExtensionRepository extensionRepository;
+	private AbstractSubscribableChannel output;
 	
 	private String json;
 	
@@ -42,22 +34,22 @@ public class SimpleLiveDataEndpointIT {
 		FileCopyUtils.copy(this.getClass().getResourceAsStream("/tmp.json"),bos);
 		json = new String(bos.toByteArray());
 	}
-	
-	@After
-	public void after() {
-		//kill
-		messageObjectRepository.deleteAllInBatch();
-		dataPointRepository.deleteAllInBatch();
-		extensionRepository.deleteAllInBatch();		
-	}
-	
+		
 	@Test
-	public void testSave() {
-		assertTrue(messageObjectRepository.count() <= 0);
-		//send the string
-		liveDataEndpoint.save(json);
-		//test
-		assertTrue(messageObjectRepository.count() > 0);
+	public void testSave() throws Exception {
+		Message<?> message = MessageBuilder.withPayload(json).build();
+		output.subscribe(new MessageHandler() {
+
+			@Override
+			public void handleMessage(Message<?> message) throws MessagingException {
+				System.out.println(">>>>>> "  + message);
+			}
+			
+		});
+		//send
+		input.send(message);
+		//wait
+		Thread.sleep(5 * 1000);
 	}
 
 }

@@ -8,10 +8,15 @@
 		http://www.springframework.org/schema/integration http://www.springframework.org/schema/integration/spring-integration.xsd">
 	
 	<!-- for use in an sxd module -->
-	<context:component-scan base-package="com.emc.data"/>
+	<bean id="pcsTranformer" class="com.emc.data.service.LiveFlattenTransformer"/>
+	
+	<bean id="objectMapper" class="com.fasterxml.jackson.databind.ObjectMapper"/>
 
 	<int:channel id="input"/>
-	
-	<int:service-activator input-channel="input" ref="simpleLiveDataEndpoint"/>
+	<int:chain input-channel="input" output-channel="output">
+		<int:transformer ref="pcsTranformer"/>
+		<int:splitter/>
+	</int:chain>
+	<int:channel id="output"/>
 
 </beans>
