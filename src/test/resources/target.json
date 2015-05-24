@@ -1,0 +1,269 @@
+{
+	"sourceId":"b6bc9394-7ccb-4216-abac-1e3f7e5fbaf9",
+	"time":"1432105740000",
+	"points":[
+		{
+			"time":"1432105740000",
+			"sourceId":"b6bc9394-7ccb-4216-abac-1e3f7e5fbaf9",
+			"pointId":"13",
+			"pointName":"SysMod",
+			"customTag":"SysMod",
+			"className":"null",
+			"systemTag":"null",
+			"physicalQuantity":"generic_quantity",
+			"unit":"/0",
+			"data":"0.0",
+			"status":"OVERRIDEN_IN1"
+		},
+		{
+			"pointId":"14",
+			"pointName":"FanSpd",
+			"customTag":"FanSpd",
+			"className":"null",
+			"systemTag":"null",
+			"physicalQuantity":"generic_quantity",
+			"unit":"/0",
+			"data":"0.0",
+			"status":"OVERRIDEN_IN1",
+			"extensions":[
+				{
+					"extensionName":"WRITEABLE",
+					"extensionType":"ACCESS TYPE"
+				},
+				{
+					"extensionName":"TIMEBASED ACQUISITION, EVERY 1 MINUTES",
+					"extensionType":"Acquisition Mode"
+				},
+				{
+					"extensionName":"OVERRIDEN_IN1",
+					"extensionType":"STATUS"
+				}
+			]
+		},
+		{
+			"pointId":"19",
+			"pointName":"SysMod1",
+			"customTag":"SysMod1",
+			"className":"null",
+			"systemTag":"null",
+			"physicalQuantity":"generic_quantity",
+			"unit":"/0",
+			"data":"3.0",
+			"status":"HEALTHY",
+			"extensions":[
+				{
+					"extensionName":"WRITEABLE",
+					"extensionType":"ACCESS TYPE"
+				},
+				{
+					"extensionName":"TIMEBASED ACQUISITION, EVERY 1 MINUTES",
+					"extensionType":"Acquisition Mode"
+				},
+				{
+					"extensionName":"HEALTHY",
+					"extensionType":"STATUS"
+				}
+			]
+		},
+		{
+			"pointId":"20",
+			"pointName":"FanSpd1",
+			"customTag":"FanSpd1",
+			"className":"null",
+			"systemTag":"null",
+			"physicalQuantity":"generic_quantity",
+			"unit":"/0",
+			"data":"3.0",
+			"status":"HEALTHY",
+			"extensions":[
+				{
+					"extensionName":"WRITEABLE",
+					"extensionType":"ACCESS TYPE"
+				},
+				{
+					"extensionName":"TIMEBASED ACQUISITION, EVERY 1 MINUTES",
+					"extensionType":"Acquisition Mode"
+				},
+				{
+					"extensionName":"HEALTHY",
+					"extensionType":"STATUS"
+				}
+			]
+		},
+		{
+			"pointId":"23",
+			"pointName":"SysMod2",
+			"customTag":"SysMod2",
+			"className":"null",
+			"systemTag":"null",
+			"physicalQuantity":"generic_quantity",
+			"unit":"/0",
+			"data":"4.0",
+			"status":"HEALTHY",
+			"extensions":[
+				{
+					"extensionName":"WRITEABLE",
+					"extensionType":"ACCESS TYPE"
+				},
+				{
+					"extensionName":"TIMEBASED ACQUISITION, EVERY 1 MINUTES",
+					"extensionType":"Acquisition Mode"
+				},
+				{
+					"extensionName":"HEALTHY",
+					"extensionType":"STATUS"
+				}
+			]
+		},
+		{
+			"pointId":"24",
+			"pointName":"FanSpd2",
+			"customTag":"FanSpd2",
+			"className":"null",
+			"systemTag":"null",
+			"physicalQuantity":"generic_quantity",
+			"unit":"/0",
+			"data":"1.0",
+			"status":"HEALTHY",
+			"extensions":[
+				{
+					"extensionName":"WRITEABLE",
+					"extensionType":"ACCESS TYPE"
+				},
+				{
+					"extensionName":"TIMEBASED ACQUISITION, EVERY 1 MINUTES",
+					"extensionType":"Acquisition Mode"
+				},
+				{
+					"extensionName":"HEALTHY",
+					"extensionType":"STATUS"
+				}
+			]
+		},
+		{
+			"pointId":"25",
+			"pointName":"DOOR",
+			"customTag":"DOOR",
+			"className":"null",
+			"systemTag":"null",
+			"physicalQuantity":"generic_quantity",
+			"unit":"/0",
+			"data":"true",
+			"status":"HEALTHY",
+			"extensions":[
+				{
+					"extensionName":"READONLY",
+					"extensionType":"ACCESS TYPE"
+				},
+				{
+					"extensionName":"TIMEBASED ACQUISITION, EVERY 1 MINUTES",
+					"extensionType":"Acquisition Mode"
+				},
+				{
+					"extensionName":"HEALTHY",
+					"extensionType":"STATUS"
+				}
+			]
+		},
+		{
+			"pointId":"26",
+			"pointName":"MSer",
+			"customTag":"MSer",
+			"className":"null",
+			"systemTag":"null",
+			"physicalQuantity":"generic_quantity",
+			"unit":"/0",
+			"data":"true",
+			"status":"HEALTHY",
+			"extensions":[
+				{
+					"extensionName":"READONLY",
+					"extensionType":"ACCESS TYPE"
+				},
+				{
+					"extensionName":"TIMEBASED ACQUISITION, EVERY 1 MINUTES",
+					"extensionType":"Acquisition Mode"
+				},
+				{
+					"extensionName":"HEALTHY",
+					"extensionType":"STATUS"
+				}
+			]
+		},
+		{
+			"pointId":"76",
+			"pointName":"RmTemp",
+			"customTag":"RmTemp",
+			"className":"null",
+			"systemTag":"null",
+			"physicalQuantity":"generic_quantity",
+			"unit":"/0",
+			"data":"-10.0",
+			"status":"HEALTHY",
+			"extensions":[
+				{
+					"extensionName":"WRITEABLE",
+					"extensionType":"ACCESS TYPE"
+				},
+				{
+					"extensionName":"TIMEBASED ACQUISITION, EVERY 1 MINUTES",
+					"extensionType":"Acquisition Mode"
+				},
+				{
+					"extensionName":"HEALTHY",
+					"extensionType":"STATUS"
+				}
+			]
+		},
+		{
+			"pointId":"77",
+			"pointName":"RmTemp1",
+			"customTag":"RmTemp1",
+			"className":"null",
+			"systemTag":"null",
+			"physicalQuantity":"generic_quantity",
+			"unit":"/0",
+			"data":"25.0",
+			"status":"HEALTHY",
+			"extensions":[
+				{
+					"extensionName":"WRITEABLE",
+					"extensionType":"ACCESS TYPE"
+				},
+				{
+					"extensionName":"TIMEBASED ACQUISITION, EVERY 1 MINUTES",
+					"extensionType":"Acquisition Mode"
+				},
+				{
+					"extensionName":"HEALTHY",
+					"extensionType":"STATUS"
+				}
+			]
+		},
+		{
+			"pointId":"78",
+			"pointName":"RmTemp2",
+			"customTag":"RmTemp2",
+			"className":"null",
+			"systemTag":"null",
+			"physicalQuantity":"generic_quantity",
+			"unit":"/0",
+			"data":"25.0",
+			"status":"HEALTHY",
+			"extensions":[
+				{
+					"extensionName":"WRITEABLE",
+					"extensionType":"ACCESS TYPE"
+				},
+				{
+					"extensionName":"TIMEBASED ACQUISITION, EVERY 1 MINUTES",
+					"extensionType":"Acquisition Mode"
+				},
+				{
+					"extensionName":"HEALTHY",
+					"extensionType":"STATUS"
+				}
+			]
+		}
+	]
+}
